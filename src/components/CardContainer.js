@@ -1,15 +1,14 @@
-import PlayerCard from "./PlayerCard"
+// CardContainer.js
+import PlayerCard from "./PlayerCard";
 
-const CardContainer = ({data}) => {
+const CardContainer = ({ filteredData }) => {
   return (
-    <div className="container" >
-       {
-        data.map((item, index) => (
-            <PlayerCard key={index} {...item}/>
-        ))
-       }
+    <div className="container">
+      {filteredData.map((item, index) => (
+        <PlayerCard key={index} {...item} />
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default CardContainer
+export default CardContainer;

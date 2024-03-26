@@ -1,7 +1,20 @@
+// Header.js
 import NbaLogo from "../assets/nba-logo.png";
-import "../App.css"
+import "../App.css";
+import { data } from '../helper/data';
 
-const Header = ({ text, handleSearchChange }) => {
+const Header = ({ text, setSearchLegend, setFilteredData }) => {
+  const handleSearchChange = (e) => {
+    const searchValue = e.target.value.toLowerCase();
+    setSearchLegend(searchValue);
+
+    const filtered = data.filter((legend) =>
+      legend.name.toLowerCase().includes(searchValue)
+    );
+
+    setFilteredData(filtered);
+  };
+
   return (
     <div className="Header">
       <img src={NbaLogo} alt="logo" />
@@ -16,6 +29,7 @@ const Header = ({ text, handleSearchChange }) => {
 };
 
 export default Header;
+
 
 
 
