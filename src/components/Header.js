@@ -7,7 +7,7 @@ const Header = ({ text, onSearchChange }) => {
       <img src={NbaLogo} alt="logo" />
       <h1>{text}</h1>
       <input 
-        type="text" 
+        type="search" 
         placeholder="Search for a legend..." 
         onChange={onSearchChange} 
       />

@@ -53,7 +53,7 @@ body {
   border-radius: 10px;
   margin: auto;
   height: 20rem;
-  box-shadow: 2px 2px 2px 1px black;
+  box-shadow: 2px 2px 2px 2px black;
   background-color: white;
 }
 
@@ -77,6 +77,9 @@ body {
 
 .card p{
   padding: 0.5rem;
+  background-color: #F4D467;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .statistics {
