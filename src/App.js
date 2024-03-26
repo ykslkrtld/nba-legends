@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header text="NBA Legends" onSearchChange={handleSearchChange} />
+      <Header text="NBA Legends" handleSearchChange={handleSearchChange} />
       <CardContainer data={filteredData} />
     </div>
   );

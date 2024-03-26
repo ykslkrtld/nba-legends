@@ -1,7 +1,7 @@
 import NbaLogo from "../assets/nba-logo.png";
 import "../App.css"
 
-const Header = ({ text, onSearchChange }) => {
+const Header = ({ text, handleSearchChange }) => {
   return (
     <div className="Header">
       <img src={NbaLogo} alt="logo" />
@@ -9,7 +9,7 @@ const Header = ({ text, onSearchChange }) => {
       <input 
         type="search" 
         placeholder="Search for a legend..." 
-        onChange={onSearchChange} 
+        onChange={handleSearchChange} 
       />
     </div>
   );
