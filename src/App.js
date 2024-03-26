@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import './App.css';
-import { data } from './helper/data'; 
-import CardContainer from './components/CardContainer';
-import Header from './components/Header';
+import React, { useState } from "react";
+import { data } from "./helper/data";
+import CardContainer from "./components/CardContainer";
+import Header from "./components/Header";
+import "./App.css";
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchLegend, setSearchLegend] = useState("");
   const [filteredData, setFilteredData] = useState(data);
 
   const handleSearchChange = (event) => {
     const searchValue = event.target.value.toLowerCase();
-    setSearchTerm(searchValue);
+    setSearchLegend(searchValue);
 
-    const filtered = data.filter(legend =>
+    const filtered = data.filter((legend) =>
       legend.name.toLowerCase().includes(searchValue)
     );
 
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header text="NBA Legends" onSearchChange={handleSearchChange}/>
+      <Header text="NBA Legends" onSearchChange={handleSearchChange} />
       <CardContainer data={filteredData} />
     </div>
   );
@@ -29,11 +29,8 @@ function App() {
 
 export default App;
 
-
-
-
 // import './App.css';
-// import { data } from './helper/data'; 
+// import { data } from './helper/data';
 // import CardContainer from './components/CardContainer';
 // import Header from './components/Header';
 
