@@ -12,8 +12,8 @@ function App() {
     const searchValue = event.target.value.toLowerCase();
     setSearchTerm(searchValue);
 
-    const filtered = data.filter(player =>
-      player.name.toLowerCase().includes(searchValue)
+    const filtered = data.filter(legend =>
+      legend.name.toLowerCase().includes(searchValue)
     );
 
     setFilteredData(filtered);
